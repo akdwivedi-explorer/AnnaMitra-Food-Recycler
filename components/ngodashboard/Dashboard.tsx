@@ -6,31 +6,26 @@ import HomeN from '../../components/ngodashboard/HomeN';
 
 function Dashboardn() {
   const [openSidebarToggle, setOpenSidebarToggle] = useState(false);
-<<<<<<< HEAD
-=======
 
   // Function to toggle the sidebar
->>>>>>> aa0d5859431eaed9dfb945f1574b91f9371174fd
   const OpenSidebar = () => {
     setOpenSidebarToggle(!openSidebarToggle);
   };
 
-  // Define an empty function for onPostMessageClick (or add your logic here)
+  // Define a function for onPostMessageClick
   const handlePostMessageClick = () => {
-    // Add any logic for posting messages, if needed
     console.log("Post message clicked");
   };
 
   return (
     <div className="flex h-screen">
-      {/* Pass the onPostMessageClick prop to SidebarN */}
       <SidebarN
         openSidebarToggle={openSidebarToggle}
         OpenSidebar={OpenSidebar}
-        onPostMessageClick={handlePostMessageClick} // Pass this prop
+        onPostMessageClick={handlePostMessageClick}  // Ensure this is passed to SidebarN
       />
       <div className="flex-1 flex flex-col">
-        <HeaderN OpenSidebar={OpenSidebar} />
+        <HeaderN OpenSidebar={OpenSidebar} onPostMessageClick={handlePostMessageClick} />  {/* Pass to HeaderN */}
         <div className="flex-1 overflow-auto p-4">
           <HomeN />
         </div>
