@@ -16,11 +16,11 @@ const Contact = () => {
   return (
     <div className="container mx-auto mt-20 px-4 py-16">
       <h1
-        className={`${playfair.className} text-4xl font-semibold text-center text-light-blue`}
+        className={`${playfair.className} text-4xl font-semibold text-center text-blue-800`}
       >
         Contact us
       </h1>
-      <p className="text-center text-light-blue mt-2">
+      <p className="text-center text-blue-600 mt-2">
         Do you have any questions? Don&apos;t hesitate to contact us
       </p>
 
@@ -47,7 +47,7 @@ const Contact = () => {
 
           {/* Email Section */}
           <div className="text-gray-700">
-            <div className="flex items-center text-light-blue">
+            <div className="flex items-center text-blue-600">
               <FaEnvelope className="mr-2" size={20} />
               <h3 className={`${manrope.className} text-l font-medium`}>
                 Email
@@ -60,7 +60,7 @@ const Contact = () => {
 
           {/* Phone Section */}
           <div className="text-gray-700">
-            <div className="flex items-center text-light-blue">
+            <div className="flex items-center text-blue-600">
               <FaPhoneAlt className="mr-2" size={20} />
               <h3 className={`${manrope.className} text-l font-medium`}>
                 Call Us
@@ -114,7 +114,7 @@ const Contact = () => {
             <div>
               <button
                 type="submit"
-                className="bg-dark-blue text-white text-center w-full text-xl px-32 py-6 rounded-md hover:bg-sky-700"
+                className="bg-blue-600 text-white text-center w-full text-xl px-32 py-6 rounded-md hover:bg-sky-700"
               >
                 Submit
               </button>

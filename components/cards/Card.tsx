@@ -9,15 +9,15 @@ export function Card() {
 }
 export const projects = [
   {
-    title: "Daily food comsumption",
+    title: "Real-Time leftover redistribution",
     description:
-      "Daily food consumption focuses on minimizing waste by planning meals carefully, using resources efficiently, and consuming leftovers or near-expiry foods.",
+      "A platform that notifies residents and local charitties of availabale leftovers, promoting redistribution instead of waste.",
     link: "https://stripe.com",
   },
   {
-    title: "Summary Report",
+    title: "Customised portion choices",
     description:
-      "A summary report based on a food wastage reduction system provides an overview of efforts and outcomes related to reducing food waste within a given timeframe",
+      "A Hostel will take the information regarding the choices of the menu so that they can get the information in prior and waste is reduced",
     link: "https://netflix.com",
   },
   {
@@ -27,15 +27,15 @@ export const projects = [
     link: "https://google.com",
   },
   {
-    title: "Partner with local NGOs/Charities.",
+    title: "Daily leftovere menu",
     description:
-      "By collaborating with these organizations, food that would otherwise go to waste can be redirected to individuals and communities in need. This partnership serves as a dual solution—reducing food waste while addressing hunger and food insecurity.",
+      "Highlight a daily leftovers special section on the menu, where repurposed food itmes from recent meals ae offered at discounted rates.",
     link: "https://meta.com",
   },
   {
-    title: "Expiry Tracking and Recipe Suggestions",
+    title: "Recipe Suggestion with the leftover food",
     description:
-      "Expiry Tracking and Recipe Suggestions for food wastage reduction can play a crucial role in ensuring that food doesn't go to waste. Implementing a tracking system alongside providing recipe suggestions helps consumers, businesses, and organizations optimize food usage before it expires, reducing waste and maximizing the value of their ingredients.",
+      "Some new recipes can be prepared with the help of the leftover food and can be presented in different style for being creative and trying out smething new.",
     link: "https://amazon.com",
   },
 //   {
