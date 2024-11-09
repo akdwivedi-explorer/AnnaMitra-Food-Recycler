@@ -3,7 +3,7 @@
 // import { Card } from "@/components/cards/Card";
 // import About from "@/components/about/About";
 // import Contact from "@/components/contact/Contact";
-// import Dashboard from "@/components/dashboard/Dashboard";
+import Dashboard from "@/components/dashboard/Dashboard";
 import Features from "@/components/features/Features";
 import Footer from "@/components/footer/Footer";
 import Header from "@/components/header/Header";
@@ -20,7 +20,7 @@ export default function Home() {
       <Header />
       <Hero />
       <Features />
-      {/* <Dashboard /> */}
+      <Dashboard />
       
       {/* <Contact /> */}
       <Footer />

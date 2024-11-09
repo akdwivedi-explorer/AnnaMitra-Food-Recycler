@@ -1,9 +1,8 @@
 import React from 'react';
 import { BsFillBellFill, BsFillEnvelopeFill, BsPersonCircle, BsSearch, BsJustify } from 'react-icons/bs';
 
-// Define the type for props
 interface HeaderProps {
-  OpenSidebar: () => void; // OpenSidebar is a function that takes no arguments and returns nothing
+  OpenSidebar: () => void;
 }
 
 function Header1({ OpenSidebar }: HeaderProps) {

@@ -1,13 +1,11 @@
 import React from 'react';
 import {
-  BsCart3,
   BsGrid1X2Fill,
-  BsFillArchiveFill,
-  BsFillGrid3X3GapFill,
   BsPeopleFill,
   BsListCheck,
   BsMenuButtonWideFill,
   BsFillGearFill,
+  BsPersonCircle
 } from 'react-icons/bs';
 
 // Define the type for the Sidebar props
@@ -22,12 +20,10 @@ function Sidebar({ openSidebarToggle, OpenSidebar }: SidebarProps) {
       id="sidebar"
       className={`${
         openSidebarToggle ? 'block' : 'hidden'
-      } lg:block fixed lg:relative lg:w-64 bg-gray-800 text-white min-h-screen`}
+      } lg:block fixed lg:relative lg:w-56 bg-gray-800 text-white min-h-screen`}
     >
-      <div className="flex items-center justify-between p-4 border-b border-gray-700">
-        <div className="flex items-center text-lg font-semibold">
-          <BsCart3 className="mr-2 text-xl" /> SHOP
-        </div>
+      <div className="flex items-center gap-3 p-4 border-b border-gray-700">
+      <BsPersonCircle className="text-xl cursor-pointer" /><p>Ashutosh Dwivedi</p>
         <button
           className="text-xl lg:hidden focus:outline-none"
           onClick={OpenSidebar}
@@ -43,18 +39,18 @@ function Sidebar({ openSidebarToggle, OpenSidebar }: SidebarProps) {
             <span>Dashboard</span>
           </a>
         </li>
-        <li className="sidebar-list-item">
+        {/* <li className="sidebar-list-item">
           <a href="#" className="flex items-center space-x-2 text-gray-300 hover:text-white">
             <BsFillArchiveFill className="text-lg" />
-            <span>Products</span>
+            <span></span>
           </a>
-        </li>
-        <li className="sidebar-list-item">
+        </li> */}
+        {/* <li className="sidebar-list-item">
           <a href="#" className="flex items-center space-x-2 text-gray-300 hover:text-white">
             <BsFillGrid3X3GapFill className="text-lg" />
             <span>Categories</span>
           </a>
-        </li>
+        </li> */}
         <li className="sidebar-list-item">
           <a href="#" className="flex items-center space-x-2 text-gray-300 hover:text-white">
             <BsPeopleFill className="text-lg" />

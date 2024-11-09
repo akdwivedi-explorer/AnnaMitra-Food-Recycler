@@ -38,6 +38,12 @@ export const projects = [
       "Some new recipes can be prepared with the help of the leftover food and can be presented in different style for being creative and trying out smething new.",
     link: "https://amazon.com",
   },
+  {
+    title: "Real time reports or summary",
+    description:
+      "Hostel or hotel owners can check there records or summary throught the platform and get the real time update.",
+    link: "https://amazon.com",
+  },
 //   {
 //     title: "Microsoft",
 //     description:

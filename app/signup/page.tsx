@@ -38,7 +38,7 @@ export function Signup() {
   };
 
   return (
-    <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white">
+    <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input mt-20 bg-white bg-opacity-35">
       <h2 className="font-bold text-xl text-neutral-800">Welcome to Anna Mitra</h2>
       <p className="text-neutral-600 text-sm max-w-sm mt-2">
         Sign up to Anna Mitra to save food and give life to needy people.
@@ -47,7 +47,7 @@ export function Signup() {
       <form className="my-8" onSubmit={handleSubmit}>
         {error && <p className="text-red-500 text-sm mb-4">{error}</p>}  {/* Show error message */}
 
-        <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
+        <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4 pt-5">
           <LabelInputContainer>
             <Label htmlFor="firstname">First Name</Label>
             <Input
