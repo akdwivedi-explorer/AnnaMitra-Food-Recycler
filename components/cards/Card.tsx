@@ -44,10 +44,10 @@ export const projects = [
       "Hostel or hotel owners can check there records or summary throught the platform and get the real time update.",
     link: "https://amazon.com",
   },
-//   {
-//     title: "Microsoft",
-//     description:
-//       "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services.",
-//     link: "https://microsoft.com",
-//   },
+  // {
+  //   title: "Inventory Management",
+  //   description:
+  //     "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services.",
+  //   link: "https://microsoft.com",
+  // },
 ];

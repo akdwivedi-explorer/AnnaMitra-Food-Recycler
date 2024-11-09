@@ -1,29 +1,36 @@
-import React from 'react';
+"use client"
+import Link from "next/link";
+import React from "react";
+import { usePathname } from "next/navigation";
 import {
   BsGrid1X2Fill,
   BsPeopleFill,
   BsListCheck,
   BsMenuButtonWideFill,
   BsFillGearFill,
-  BsPersonCircle
-} from 'react-icons/bs';
+  BsPersonCircle,
+} from "react-icons/bs";
 
-// Define the type for the Sidebar props
 interface SidebarProps {
-  openSidebarToggle: boolean; // A boolean indicating whether the sidebar is open or not
-  OpenSidebar: () => void; // A function to toggle the sidebar state
+  openSidebarToggle: boolean;
+  OpenSidebar: () => void;
 }
 
 function Sidebar({ openSidebarToggle, OpenSidebar }: SidebarProps) {
+  const pathname = usePathname();
+
+  const isActive = (path: string) => pathname === path;
+
   return (
     <aside
       id="sidebar"
       className={`${
-        openSidebarToggle ? 'block' : 'hidden'
+        openSidebarToggle ? "block" : "hidden"
       } lg:block fixed lg:relative lg:w-56 bg-gray-800 text-white min-h-screen`}
     >
       <div className="flex items-center gap-3 p-4 border-b border-gray-700">
-      <BsPersonCircle className="text-xl cursor-pointer" /><p>Ashutosh Dwivedi</p>
+        <BsPersonCircle className="text-xl cursor-pointer" />
+        <p>Ashutosh Dwivedi</p>
         <button
           className="text-xl lg:hidden focus:outline-none"
           onClick={OpenSidebar}
@@ -34,46 +41,59 @@ function Sidebar({ openSidebarToggle, OpenSidebar }: SidebarProps) {
 
       <ul className="p-4 space-y-4">
         <li className="sidebar-list-item">
-          <a href="#" className="flex items-center space-x-2 text-gray-300 hover:text-white">
+          <Link
+            href="/dashboard"
+            className={`flex items-center space-x-2 text-gray-300 hover:text-white ${
+              isActive("/dashboard") ? "font-bold text-white" : ""
+            }`}
+          >
             <BsGrid1X2Fill className="text-lg" />
             <span>Dashboard</span>
-          </a>
+          </Link>
         </li>
-        {/* <li className="sidebar-list-item">
-          <a href="#" className="flex items-center space-x-2 text-gray-300 hover:text-white">
-            <BsFillArchiveFill className="text-lg" />
-            <span></span>
-          </a>
-        </li> */}
-        {/* <li className="sidebar-list-item">
-          <a href="#" className="flex items-center space-x-2 text-gray-300 hover:text-white">
-            <BsFillGrid3X3GapFill className="text-lg" />
-            <span>Categories</span>
-          </a>
-        </li> */}
         <li className="sidebar-list-item">
-          <a href="#" className="flex items-center space-x-2 text-gray-300 hover:text-white">
+          <Link
+            href="#"
+            className={`flex items-center space-x-2 text-gray-300 hover:text-white ${
+              isActive("/customers") ? "font-bold text-white" : ""
+            }`}
+          >
             <BsPeopleFill className="text-lg" />
             <span>Customers</span>
-          </a>
+          </Link>
         </li>
         <li className="sidebar-list-item">
-          <a href="#" className="flex items-center space-x-2 text-gray-300 hover:text-white">
+          <Link
+            href="#"
+            className={`flex items-center space-x-2 text-gray-300 hover:text-white ${
+              isActive("/inventory") ? "font-bold text-white" : ""
+            }`}
+          >
             <BsListCheck className="text-lg" />
             <span>Inventory</span>
-          </a>
+          </Link>
         </li>
         <li className="sidebar-list-item">
-          <a href="#" className="flex items-center space-x-2 text-gray-300 hover:text-white">
+          <Link
+            href="/notification"
+            className={`flex items-center space-x-2 text-gray-300 hover:text-white ${
+              isActive("/notification") ? "font-bold text-white" : ""
+            }`}
+          >
             <BsMenuButtonWideFill className="text-lg" />
-            <span>Reports</span>
-          </a>
+            <span>Notification</span>
+          </Link>
         </li>
         <li className="sidebar-list-item">
-          <a href="#" className="flex items-center space-x-2 text-gray-300 hover:text-white">
+          <Link
+            href="/settings"
+            className={`flex items-center space-x-2 text-gray-300 hover:text-white ${
+              isActive("/settings") ? "font-bold text-white" : ""
+            }`}
+          >
             <BsFillGearFill className="text-lg" />
             <span>Setting</span>
-          </a>
+          </Link>
         </li>
       </ul>
     </aside>

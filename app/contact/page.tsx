@@ -29,7 +29,7 @@ const Contact = () => {
           Do you have any questions? Don&apos;t hesitate to contact us
         </p>
 
-        <div className={`${playfair.className} grid grid-cols-1 md:grid-cols-2 gap-8 mt-12`}>
+        <div className={`${playfair.className} flex justify-evenly gap-3 mt-12`}>
           {/* Contact Info Section */}
           <div className="space-y-6">
             <h2 className={`${playfair.className} text-4xl`}>Get in Touch</h2>

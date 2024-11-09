@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { Spotlight } from "../../components/ui/Spotlight";
 import { LampContainer } from "../../components/ui/lamp";
 import Header from "../../components/header/Header";
+import Footer from "@/components/footer/Footer";
 
 const About = () => {
   return (
@@ -74,6 +75,7 @@ const About = () => {
         EcoServe’s solutions are designed to make an immediate and measurable impact on food waste reduction. With each partner, we aim to save valuable resources, reduce environmental footprints, and create a positive ripple effect in the community. We believe that by aligning hospitality practices with sustainable goals, we can collectively shape a healthier future
         </p>
       </div>
+      <Footer />
     </div>
   );
 };

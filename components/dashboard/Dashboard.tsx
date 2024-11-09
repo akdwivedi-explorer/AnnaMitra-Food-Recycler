@@ -6,8 +6,6 @@ import Home1 from './Home1';
 
 function Dashboard() {
   const [openSidebarToggle, setOpenSidebarToggle] = useState(false);
-
-  // Function to toggle the sidebar state
   const OpenSidebar = () => {
     setOpenSidebarToggle(!openSidebarToggle);
   };
