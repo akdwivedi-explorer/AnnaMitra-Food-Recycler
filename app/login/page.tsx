@@ -20,13 +20,9 @@ const LoginPage = () => {
       setError("Email and Password are required.");
       return;
     }
-
-    // Replace this with actual API logic to check credentials
     if (email === "user@example.com" && password === "password123") {
-      // Simulate successful login and store an auth token
-      localStorage.setItem("authToken", "your-auth-token");
 
-      // Redirect to dashboard or home page after successful login
+      localStorage.setItem("authToken", "your-auth-token");
       router.push("/dashboard");
     } else {
       setError("Invalid email or password.");

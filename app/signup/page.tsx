@@ -1,11 +1,11 @@
-"use client";  // Mark the component as a client-side component
+"use client";
 
 import React, { useState } from "react";
-import { Label } from "@/components/ui/label";  // Assuming Label component is located here
-import { Input } from "@/components/ui/input";  // Assuming Input component is located here
-import { cn } from "@/lib/utils";  // Assuming cn utility function is located here
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import { cn } from "@/lib/utils";
 import { IconBrandGoogle } from "@tabler/icons-react";
-import { useRouter } from "next/navigation";  // Import useRouter from next/navigation
+import { useRouter } from "next/navigation";
 
 export function Signup() {
   const [firstname, setFirstname] = useState("");
@@ -13,24 +13,17 @@ export function Signup() {
   const [contact, setContact] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
-  const router = useRouter();  // Use the useRouter hook to navigate after signup
+  const router = useRouter();
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // Simple validation
     if (!firstname || !email || !contact || !password) {
       setError("All fields are required.");
       return;
     }
-
-    // Replace this with your actual API logic for signup
-    // Simulate successful signup and redirect
     if (email === "user@example.com" && password === "password123") {
-      // Store token or user data as needed
       localStorage.setItem("authToken", "your-auth-token");
-
-      // Redirect to a dashboard or home page after successful signup
       router.push("/dashboard");
     } else {
       setError("Signup failed. Please try again.");
@@ -45,7 +38,7 @@ export function Signup() {
       </p>
 
       <form className="my-8" onSubmit={handleSubmit}>
-        {error && <p className="text-red-500 text-sm mb-4">{error}</p>}  {/* Show error message */}
+        {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
 
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4 pt-5">
           <LabelInputContainer>
