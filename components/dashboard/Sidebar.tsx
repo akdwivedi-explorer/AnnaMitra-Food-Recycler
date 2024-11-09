@@ -52,7 +52,7 @@ function Sidebar({ openSidebarToggle, OpenSidebar }: SidebarProps) {
           </a>
         </li> */}
         <li className="sidebar-list-item">
-          <a href="#" className="flex items-center space-x-2 text-gray-300 hover:text-white">
+          <a href="/customer" className="flex items-center space-x-2 text-gray-300 hover:text-white">
             <BsPeopleFill className="text-lg" />
             <span>Customers</span>
           </a>
@@ -64,7 +64,7 @@ function Sidebar({ openSidebarToggle, OpenSidebar }: SidebarProps) {
           </a>
         </li>
         <li className="sidebar-list-item">
-          <a href="#" className="flex items-center space-x-2 text-gray-300 hover:text-white">
+          <a href="/report" className="flex items-center space-x-2 text-gray-300 hover:text-white">
             <BsMenuButtonWideFill className="text-lg" />
             <span>Reports</span>
           </a>
