@@ -10,27 +10,21 @@ import { useRouter } from "next/navigation";
 const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState<string | null>(null);
   const router = useRouter();
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    localStorage.setItem("authToken", "dummy-auth-token");
+    router.push("/dashboard"); // Redirect to dashboard
+  };
 
-    if (!email || !password) {
-      setError("Email and Password are required.");
-      return;
-    }
-    if (email === "user@example.com" && password === "password123") {
-
-      localStorage.setItem("authToken", "your-auth-token");
-      router.push("/dashboard");
-    } else {
-      setError("Invalid email or password.");
-    }
+  const handleGoogleSignIn = () => {
+    localStorage.setItem("authToken", "google-auth-token");
+    router.push("/dashboard"); // Redirect to dashboard
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-[#000F11] bg-opacity-90  p-4">
+    <div className="flex items-center justify-center min-h-screen bg-[#000F11] bg-opacity-90 p-4">
       <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white mt-8">
         <h2 className="font-bold text-xl text-neutral-800">Welcome to Anna Mitra</h2>
         <p className="text-neutral-600 text-sm max-w-sm mt-2">
@@ -38,8 +32,6 @@ const LoginPage = () => {
         </p>
 
         <form className="my-8" onSubmit={handleSubmit}>
-          {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
-
           <LabelInputContainer className="mb-4">
             <Label htmlFor="email">Email Address</Label>
             <Input
@@ -78,7 +70,7 @@ const LoginPage = () => {
             <button
               className="relative flex space-x-2 items-center justify-start px-4 w-full text-black rounded-md h-10 font-medium shadow-input bg-gray-100"
               type="button"
-              onClick={() => console.log("Google sign-in")}
+              onClick={handleGoogleSignIn}
             >
               <IconBrandGoogle className="h-4 w-4 text-neutral-800" />
               <span className="text-neutral-700 text-sm">Sign in with Google</span>

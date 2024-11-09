@@ -22,12 +22,14 @@ export function Signup() {
       setError("All fields are required.");
       return;
     }
-    if (email === "user@example.com" && password === "password123") {
-      localStorage.setItem("authToken", "your-auth-token");
-      router.push("/dashboard");
-    } else {
-      setError("Signup failed. Please try again.");
-    }
+
+    localStorage.setItem("authToken", "dummy-auth-token");
+    router.push("/dashboard"); // Redirect to dashboard
+  };
+
+  const handleGoogleSignUp = () => {
+    localStorage.setItem("authToken", "google-auth-token");
+    router.push("/dashboard"); // Redirect to dashboard
   };
 
   return (
@@ -104,7 +106,7 @@ export function Signup() {
           <button
             className="relative flex space-x-2 items-center justify-start px-4 w-full text-black rounded-md h-10 font-medium shadow-input bg-gray-100"
             type="button"
-            onClick={() => console.log("Google sign-in")}
+            onClick={handleGoogleSignUp}
           >
             <IconBrandGoogle className="h-4 w-4 text-neutral-800" />
             <span className="text-neutral-700 text-sm">Sign up with Google</span>
