@@ -33,7 +33,8 @@ export function Signup() {
   };
 
   return (
-    <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input mt-20 bg-white bg-opacity-35">
+    <div className="flex items-center justify-center min-h-screen bg-[#000F11] bg-opacity-90  p-4">
+    <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input mt-20 bg-white">
       <h2 className="font-bold text-xl text-neutral-800">Welcome to Anna Mitra</h2>
       <p className="text-neutral-600 text-sm max-w-sm mt-2">
         Sign up to Anna Mitra to save food and give life to needy people.
@@ -114,6 +115,7 @@ export function Signup() {
           </button>
         </div>
       </form>
+    </div>
     </div>
   );
 }

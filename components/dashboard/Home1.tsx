@@ -62,7 +62,7 @@ const Home1: React.FC = () => {
         </div>
         <div className="bg-white p-4 rounded-lg shadow flex flex-col items-center">
           <div className="flex items-center mb-4 text-purple-600">
-            <h3 className="text-lg font-semibold">CUSTOMERS</h3>
+            <h3 className="text-lg font-semibold">NOTIFICATION</h3>
             <BsPeopleFill className="ml-2 text-2xl" />
           </div>
           <h1 className="text-3xl font-bold text-gray-700">33</h1>
