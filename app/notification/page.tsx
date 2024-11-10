@@ -32,7 +32,7 @@ const Notification = () => {
 
       <div className="flex-1 ml-64">
         {/* Header */}
-        <header className="bg-white text-black shadow-md fixed top-0 left-64 right-0 z-20 h-16 flex items-center px-6">
+        <header className="bg-white text-black shadow-md fixed w-full h-16 flex justify-between px-6 z-20">
           <Header1 />
         </header>
 

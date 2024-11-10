@@ -1,22 +1,7 @@
 import React from 'react';
-import {
-  BsFillArchiveFill,
-  BsFillGrid3X3GapFill,
-  BsPeopleFill,
-  BsFillBellFill,
-} from 'react-icons/bs';
-import {
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-  ResponsiveContainer,
-  LineChart,
-  Line,
-} from 'recharts';
+import { BsFillArchiveFill, BsFillGrid3X3GapFill, BsPeopleFill, BsFillBellFill } from 'react-icons/bs';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line } from 'recharts';
+import ThresholdLimit from './ThresholdLimit'; // Import ThresholdLimit
 
 interface DataType {
   name: string;
@@ -40,11 +25,12 @@ const Home1: React.FC = () => {
   const formatYAxis = (value: number) => `${value / 1000}Kg`;
 
   return (
-    <main className="p-6 bg-gray-100 min-h-screen">
+    <main className="p-6 bg-gray-100 min-h-screen relative">
       <div className="mb-6">
         <h3 className="text-2xl font-bold text-gray-800">DASHBOARD</h3>
       </div>
 
+      {/* Summary Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         <div className="bg-white p-4 rounded-lg shadow flex flex-col items-center">
           <div className="flex items-center mb-4 text-blue-600">
@@ -76,6 +62,7 @@ const Home1: React.FC = () => {
         </div>
       </div>
 
+      {/* Charts Section */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="bg-white p-6 rounded-lg shadow">
           <ResponsiveContainer width="100%" height={300}>
@@ -105,6 +92,9 @@ const Home1: React.FC = () => {
           </ResponsiveContainer>
         </div>
       </div>
+
+      {/* ThresholdLimit component at the bottom-right */}
+      <ThresholdLimit />
     </main>
   );
 };

@@ -52,14 +52,17 @@ function Sidebar({ openSidebarToggle, OpenSidebar }: SidebarProps) {
           </Link>
         </li>
         <li className="sidebar-list-item">
-          <a href="/customer" className="flex items-center space-x-2 text-gray-300 hover:text-white">
+          <Link
+            href="/customer"
+            className={`flex items-center space-x-2 text-gray-300 hover:text-white ${isActive("/customer") ? "font-bold text-white" : ""}`}
+          >
             <BsPeopleFill className="text-lg" />
             <span>Customers</span>
           </Link>
         </li>
         <li className="sidebar-list-item">
           <Link
-            href="#"
+            href="/inventory"
             className={`flex items-center space-x-2 text-gray-300 hover:text-white ${
               isActive("/inventory") ? "font-bold text-white" : ""
             }`}
@@ -69,7 +72,10 @@ function Sidebar({ openSidebarToggle, OpenSidebar }: SidebarProps) {
           </Link>
         </li>
         <li className="sidebar-list-item">
-          <a href="/report" className="flex items-center space-x-2 text-gray-300 hover:text-white">
+          <Link
+            href="/notification"
+            className={`flex items-center space-x-2 text-gray-300 hover:text-white ${isActive("/notification") ? "font-bold text-white" : ""}`}
+          >
             <BsMenuButtonWideFill className="text-lg" />
             <span>Notification</span>
           </Link>
